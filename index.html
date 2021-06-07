@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Experiment Stories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Experiment Stories</h1><br />
+  </header>
+
+  <p id="messaging"></p>
+
+  <section id="before-sign-in">
+
+    <h3>Sign Up</h3>
+    <section>
+      <form id="sign-up">
+        <input name="credentials[email]" required type="email" placeholder="Email" />
+        <input name="credentials[password]" required type="password" placeholder="Password" />
+        <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
+        <button type="submit" class="btn btn-light">Sign Up</button>
+      </form>
+    </section>
+
+    <h3>Sign In</h3>
+    <section>
+      <form id="sign-in">
+        <input name="credentials[email]" required type="email" placeholder="Email">
+        <input name="credentials[password]" required type="password" placeholder="password">
+        <button type="submit" class="btn btn-light">Sign In</button>
+      </form>
+    </section>
+  </section>
+
+</body>
+
 </html>
