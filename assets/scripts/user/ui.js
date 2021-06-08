@@ -33,8 +33,9 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
+  $('#sign-out').trigger('reset')
   store.user = null
-  $('#messaging').text('Password change succesfull')
+  $('#messaging').text('Sign Out succesfull')
 }
 
 const signOutFailure = function () {
