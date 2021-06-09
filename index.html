@@ -50,6 +50,37 @@
     <button id="sign-out" class="btn btn-light">Sign Out</button>
   </section>
 
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <h3>Experiment Story</h3>
+        <form class="add-post-form" id="create-story">
+          <div class="form-group">
+            <label for="body">Hypothesis</label>
+            <textarea class="form-control" id="body-value"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="title">Tactic</label>
+            <input type="text" class="form-control" id="title-value">
+          </div>
+          <button type="submit" class="btn btn-light">Update</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="story-list row">
+      <div class="card mt-4 col-md-6 bg-light">
+        <div class="card-body">
+          <p class="card-text">We believe (business outcome) can be achieve if (persona) can (persona outcome) with (feature/solution)</p>
+          <h6 class="card-subtitle mb-2 text-muted">Landing Page Test</h6>
+          <a href="#" class="card-link">Edit</a>
+          <a href="#" class="card-link">Complete</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
