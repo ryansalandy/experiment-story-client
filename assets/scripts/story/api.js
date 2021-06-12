@@ -6,7 +6,9 @@ const createStory = function (data) {
     method: 'POST',
     data,
     url: config.apiUrl + '/stories',
-    headers: { Authorization: `Bearer ${store.user.token}` }
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
   })
 }
 

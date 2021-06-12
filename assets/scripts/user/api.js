@@ -4,7 +4,7 @@ const store = require('./../store.js')
 const signUp = function (data) {
   return $.ajax({
     method: 'POST',
-    data: data,
+    data,
     url: config.apiUrl + '/sign-up'
   })
 }
@@ -12,7 +12,7 @@ const signUp = function (data) {
 const signIn = function (data) {
   return $.ajax({
     method: 'POST',
-    data: data,
+    data,
     url: config.apiUrl + '/sign-in'
   })
 }
@@ -30,7 +30,9 @@ const signOut = function () {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/sign-out',
-    headers: { Authorization: `Bearer ${store.user.token}` }
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
   })
 }
 

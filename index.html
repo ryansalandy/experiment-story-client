@@ -17,31 +17,38 @@
   <div class="container">
     <div class="row mt-3">
       <div class="col-md-9">
-  <header>
-    <h1>Experiment Stories</h1><br />
-  </header>
-  <p id="messaging"></p>
-  <section id="before-sign-in">
-    <h3>Sign Up</h3>
-    <div>
-      <form id="sign-up">
-        <input name="credentials[email]" required type="email" placeholder="Email" />
-        <input name="credentials[password]" required type="password" placeholder="Password" />
-        <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
-        <button type="submit" class="btn btn-light">Sign Up</button>
-      </form>
-    </div>
-    <h3>Sign In</h3>
-    <div>
-      <form id="sign-in">
-        <input name="credentials[email]" required type="email" placeholder="Email">
-        <input name="credentials[password]" required type="password" placeholder="password">
-        <button type="submit" class="btn btn-light">Sign In</button>
-      </form>
-    </div>
-  </section>
+        <header>
+          <h1>Experiment Stories</h1>
+          <p id="messaging"></p>
+        </header>
 
-  <section id='after-sign-in'>
+        <section id="before-sign-in">
+          <h3>Sign Up</h3>
+          <div>
+            <form id="sign-up">
+              <input name="credentials[email]" required type="email" placeholder="Email" />
+              <input name="credentials[password]" required type="password" placeholder="Password" />
+              <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
+              <button type="submit" class="btn btn-light">Sign Up</button>
+            </form>
+          </div>
+          <h3>Sign In</h3>
+          <div>
+            <form id="sign-in">
+              <input name="credentials[email]" required type="email" placeholder="Email">
+              <input name="credentials[password]" required type="password" placeholder="password">
+              <button type="submit" class="btn btn-light">Sign In</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <section id='after-sign-in' class="no-show">
+
+  <div class="container">
+
     <h3>Change Password</h3>
     <div>
       <form id="change-password">
@@ -51,12 +58,7 @@
       </form>
     </div>
     <button id="sign-out" class="btn btn-light">Sign Out</button>
-  </section>
-</div>
-</div>
-</div>
 
-  <div class="container">
     <div class="row mt-3">
       <div class="col-md-6">
         <h3>Experiment Story</h3>
@@ -68,6 +70,10 @@
           <div class="form-group">
             <label for="title">Tactic</label>
             <input type="text" class="form-control" id="title-value">
+          </div>
+          <div class="form-group">
+            <label for="title">Votes</label>
+            <input type="number" class="form-control" id="team-votes">
           </div>
           <button type="submit" class="btn btn-light">Update</button>
         </form>
@@ -84,8 +90,22 @@
         </div>
       </div>
     </div>
-  </div>
 
+      <!-- <h3>Change Password</h3>
+      <div>
+        <form id="change-password">
+          <input name="passwords[old]" required type="password" placeholder="Old password" />
+          <input name="passwords[new]" required type="password" placeholder="New password" />
+          <button class="btn btn-light" type="submit">Submit</button>
+        </form>
+      </div>
+      <button id="sign-out" class="btn btn-light">Sign Out</button> -->
+
+      </div>
+    </section>
+  <footer>
+    <p>Test footer</p>
+  </footer>
 </body>
 
 </html>
