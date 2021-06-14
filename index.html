@@ -14,6 +14,16 @@
 </head>
 
 <body>
+  <section id="nav-bar" class="no-show">
+    <nav class="navbar navbar-light bg-light">
+      <form id="change-password">
+        <input name="passwords[old]" required type="password" placeholder="Old password" />
+        <input name="passwords[new]" required type="password" placeholder="New password" />
+        <button class="btn btn-light" type="submit">Change password</button>
+      </form>
+      <button id="sign-out" class="btn btn-light">Sign Out</button>
+    </nav>
+  </section>
   <div class="container">
     <div class="row mt-3">
       <div class="col-md-9">
@@ -23,7 +33,7 @@
         </header>
 
         <section id="before-sign-in">
-          <h3>Sign Up</h3>
+          <h4>Sign Up</h4>
           <div>
             <form id="sign-up">
               <input name="credentials[email]" required type="email" placeholder="Email" />
@@ -32,7 +42,7 @@
               <button type="submit" class="btn btn-light">Sign Up</button>
             </form>
           </div>
-          <h3>Sign In</h3>
+          <h4>Sign In</h4>
           <div>
             <form id="sign-in">
               <input name="credentials[email]" required type="email" placeholder="Email">
@@ -46,62 +56,46 @@
   </div>
 
   <section id='after-sign-in' class="no-show">
-
   <div class="container">
-
-    <h3>Change Password</h3>
-    <div>
-      <form id="change-password">
-        <input name="passwords[old]" required type="password" placeholder="Old password" />
-        <input name="passwords[new]" required type="password" placeholder="New password" />
-        <button class="btn btn-light" type="submit">Submit</button>
-      </form>
-    </div>
-    <button id="sign-out" class="btn btn-light">Sign Out</button>
-
     <div class="row mt-3">
       <div class="col-md-6">
-        <h3>Experiment Story</h3>
+        <button id="add-story" type="submit" class="btn btn-light">ADD</button>
+        <button id="show-stories" type="submit" class="btn btn-light">SHOW</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="after-add" class="no-show">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-6">
         <form class="add-post-form" id="create-story">
           <div class="form-group">
             <label for="body">Hypothesis</label>
-            <textarea class="form-control" id="body-value"></textarea>
+            <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
           </div>
           <div class="form-group">
             <label for="title">Tactic</label>
-            <input type="text" class="form-control" id="title-value">
+            <input name="story[tactic]" type="text" class="form-control" id="title-value">
           </div>
-          <div class="form-group">
-            <label for="title">Votes</label>
-            <input type="number" class="form-control" id="team-votes">
-          </div>
-          <button type="submit" class="btn btn-light">Update</button>
+          <button type="submit" class="btn btn-light">Add Story</button>
         </form>
       </div>
     </div>
-
-    <div class="story-list row">
+    <div class="post-list row" id="story-list">
       <div class="card mt-4 col-md-6 bg-light">
-        <div class="card-body">
+        <div class="card-body" id="stories-div">
           <p class="card-text">We believe (business outcome) can be achieve if (persona) can (persona outcome) with (feature/solution)</p>
           <h6 class="card-subtitle mb-2 text-muted">Landing Page Test</h6>
-          <a href="#" class="card-link">Edit</a>
-          <a href="#" class="card-link">Complete</a>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button">Update</button>
+            <button class="btn btn-light" type="button" id="delete-story">Done</button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-      <!-- <h3>Change Password</h3>
-      <div>
-        <form id="change-password">
-          <input name="passwords[old]" required type="password" placeholder="Old password" />
-          <input name="passwords[new]" required type="password" placeholder="New password" />
-          <button class="btn btn-light" type="submit">Submit</button>
-        </form>
-      </div>
-      <button id="sign-out" class="btn btn-light">Sign Out</button> -->
-
-      </div>
     </section>
   <footer>
     <p>Test footer</p>

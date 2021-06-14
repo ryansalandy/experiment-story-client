@@ -1,11 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-// }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   margin: 16px 0px 26px 0px
+}
+
+.nav-btn {
+  margin: auto;
 }
 
 .no-show {

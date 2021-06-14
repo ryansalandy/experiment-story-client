@@ -22,6 +22,8 @@ const signInSuccess = function (res) {
   $('#after-sign-in').show()
 
   $('#before-sign-in').hide()
+
+  $('#nav-bar').show()
 }
 
 const signInFailure = function () {
@@ -38,7 +40,6 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('#sign-out').trigger('reset')
   store.user = null
 
   $('#messaging').text('Sign Out succesfull')
@@ -46,6 +47,10 @@ const signOutSuccess = function () {
   $('#before-sign-in').show()
 
   $('#after-sign-in').hide()
+
+  $('#nav-bar').hide()
+
+  $('#after-add').hide()
 }
 
 const signOutFailure = function () {
