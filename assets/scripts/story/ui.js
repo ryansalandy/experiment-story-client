@@ -6,16 +6,24 @@ const addStorySuccess = function () {
   $('#story-list').hide()
 }
 
+const addStoryFailure = function () {
+  $('#messaging').text('Uh Oh! Something went wrong!')
+}
+
 const createStorySuccess = function (res) {
   $('#create-story').trigger('reset')
-  $('#messaging').text('Your Experiment Story has been created')
+  $('#messaging').text('Your Experiment Story has been Created')
   store.story = res.story
   $('#after-add').hide()
 }
 
+const createStoryFailure = function () {
+  $('#messaging').text('Uh Oh! Something went wrong!')
+}
+
 const showStoriesSuccess = function (res) {
   $('#show-story').trigger('reset')
-  $('#messaging').text('These are your experiment stories to complete')
+  $('#messaging').text('These are your Experiment Stories to Complete')
   $('#after-add').hide()
   $('#story-list').show()
   let storiesHtml = ''
@@ -38,6 +46,10 @@ const showStoriesSuccess = function (res) {
   $('#story-list').html(storiesHtml)
 }
 
+const showStoriesFailure = function () {
+  $('#messaging').text('Uh Oh! Something went wrong!')
+}
+
 const deleteStorySuccess = function (res) {
   $('#delete-story').trigger('reset')
   $('#messaging').text('Story has been completed')
@@ -47,8 +59,10 @@ const deleteStorySuccess = function (res) {
 
 module.exports = {
   addStorySuccess,
+  addStoryFailure,
   createStorySuccess,
-  // createStoryFailure,
+  createStoryFailure,
   showStoriesSuccess,
+  showStoriesFailure,
   deleteStorySuccess
 }

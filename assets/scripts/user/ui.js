@@ -4,7 +4,6 @@ const store = require('./../store')
 // Sign up begin
 const signUpSuccess = function (res) {
   $('#sign-up').trigger('reset')
-
   $('#messaging').text('Please sign in with, ' + res.user.email)
 }
 
@@ -14,15 +13,10 @@ const signUpFailure = function (err) {
 
 const signInSuccess = function (res) {
   $('#sign-in').trigger('reset')
-
   store.user = res.user
-
   $('#messaging').text(res.user.email + ', has signed in successfully!')
-
   $('#after-sign-in').show()
-
   $('#before-sign-in').hide()
-
   $('#nav-bar').show()
 }
 
@@ -41,17 +35,11 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   store.user = null
-
   $('#messaging').text('Sign Out succesfull')
-
   $('#before-sign-in').show()
-
   $('#after-sign-in').hide()
-
   $('#nav-bar').hide()
-
   $('#after-add').hide()
-
   $('#story-list').hide()
 }
 

@@ -10,7 +10,6 @@ const onAddStory = function (event) {
 
 const onCreateStory = function (event) {
   event.preventDefault()
-
   const data = getFormFields(event.target)
   console.log(data)
   api.createStory(data)
@@ -27,11 +26,8 @@ const onShowStories = function (event) {
 
 const onDeleteStory = function (event) {
   event.preventDefault()
-
   const data = getFormFields(event.target)
-
   const id = data.story.id
-
   api.deleteTeam(data, id)
     .then(ui.deleteTeamSuccess)
     .catch(ui.deleteTeamFailure)
