@@ -1,4 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 
 body {
   display: flex;
@@ -7,22 +10,55 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-family: 'Poppins' serif;
 }
 
 h1 {
-  margin: 16px 0px 26px 0px
+  margin: 16px 0px 36px 0px;
+  color: rgb(80, 69, 175);
+  font-family: 'Poppins', serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h4 {
+  margin: 16px 0px 0px 0px;
+  color: rgb(80, 69, 175);
+}
+
+.btn {
+  color: rgb(80, 69, 175);
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(252, 167,33);
+  color: white;
+}
+
+#messaging {
+  color: rgb(252, 167,33);
+  font-size: 18px;
+}
+
+label {
+  color: rgb(80, 69, 175);
+}
+
+.card-text {
+  color: rgb(80, 69, 175);
 }
 
 .nav-btn {
   margin: auto;
 }
 
-.no-show {
-  display: none;
+form {
+  margin: 8px 0px 26px 0;
 }
 
-form {
-  margin: 10px 0px 20px 0
+.no-show {
+  display: none;
 }
 
 // footer {

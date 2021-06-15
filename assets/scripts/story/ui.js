@@ -27,7 +27,7 @@ const showStoriesSuccess = function (res) {
           <p class="card-text">${story.hypothesis}</p>
           <h6 class="card-subtitle mb-2 text-muted">${story.tactic}</h6>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary me-md-2" type="button">Update</button>
+            <button class="btn btn-light me-md-2" type="button">Update</button>
             <button id="delete-story" type="submit" class="btn btn-light">Done</button>
           </div>
         </div>
