@@ -19,7 +19,6 @@ $(() => {
   $('#add-story').on('click', storyEvents.onAddStory)
   $('#create-story').on('submit', storyEvents.onCreateStory)
   $('#show-stories').on('click', storyEvents.onShowStories)
-  // $('#show-story').on('click', storyEvents.onShowStory)
   // $('#update-story').on('click', storyEvents.onUpdateStory)
-  // $('#delete-story').on('click', storyEvents.onDeleteStory)
+  $('#delete-story').on('click', storyEvents.onDeleteStory)
 })

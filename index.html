@@ -56,47 +56,38 @@
   </div>
 
   <section id='after-sign-in' class="no-show">
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-6">
-        <button id="add-story" type="submit" class="btn btn-light">ADD</button>
-        <button id="show-stories" type="submit" class="btn btn-light">SHOW</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="after-add" class="no-show">
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-6">
-        <form class="add-post-form" id="create-story">
-          <div class="form-group">
-            <label for="body">Hypothesis</label>
-            <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="title">Tactic</label>
-            <input name="story[tactic]" type="text" class="form-control" id="title-value">
-          </div>
-          <button type="submit" class="btn btn-light">Add Story</button>
-        </form>
-      </div>
-    </div>
-    <div class="post-list row" id="story-list">
-      <div class="card mt-4 col-md-6 bg-light">
-        <div class="card-body" id="stories-div">
-          <p class="card-text">We believe (business outcome) can be achieve if (persona) can (persona outcome) with (feature/solution)</p>
-          <h6 class="card-subtitle mb-2 text-muted">Landing Page Test</h6>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary me-md-2" type="button">Update</button>
-            <button class="btn btn-light" type="button" id="delete-story">Done</button>
-          </div>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <button id="add-story" type="submit" class="btn btn-light">ADD</button>
+          <button id="show-stories" type="submit" class="btn btn-light">SHOW</button>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section id="after-add" class="no-show">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <form class="add-post-form" id="create-story">
+            <div class="form-group">
+              <label for="body">Hypothesis</label>
+              <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="title">Tactic</label>
+              <input name="story[tactic]" type="text" class="form-control" id="title-value">
+            </div>
+            <button type="submit" class="btn btn-light">Add Story</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+      <div id="story-list">
 
-    </section>
+    </div>
+
   <footer>
     <p>Test footer</p>
   </footer>

@@ -51,6 +51,8 @@ const signOutSuccess = function () {
   $('#nav-bar').hide()
 
   $('#after-add').hide()
+
+  $('#story-list').hide()
 }
 
 const signOutFailure = function () {

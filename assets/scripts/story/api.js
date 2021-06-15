@@ -13,9 +13,10 @@ const createStory = function (data) {
   })
 }
 
-const showStories = function () {
+const showStories = function (data) {
   return $.ajax({
     method: 'GET',
+    data,
     url: config.apiUrl + '/stories',
     headers: {
       Authorization: `Bearer ${store.user.token}`
