@@ -1,21 +1,21 @@
 const store = require('./../store')
 
 const addStorySuccess = function () {
+  $('#messaging').text('Enter your Experiment Hypothesis and Tactic')
   $('#after-add').show()
   $('#story-list').hide()
 }
 
 const createStorySuccess = function (res) {
   $('#create-story').trigger('reset')
-  $('#messaging').text('Story created')
+  $('#messaging').text('Your Experiment Story has been created')
   store.story = res.story
   $('#after-add').hide()
 }
 
 const showStoriesSuccess = function (res) {
-  // $('#show-story').trigger('reset')
-  $('#messaging').text('These are all your stories')
-  // store.story = res.story
+  $('#show-story').trigger('reset')
+  $('#messaging').text('These are your experiment stories to complete')
   $('#after-add').hide()
   $('#story-list').show()
   let storiesHtml = ''
