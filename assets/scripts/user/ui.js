@@ -4,38 +4,39 @@ const store = require('./../store')
 // Sign up begin
 const signUpSuccess = function (res) {
   $('#sign-up').trigger('reset')
-  $('#messaging').text('Please sign in with, ' + res.user.email)
+  $('#messaging').text('Please Sign In with, ' + res.user.email)
 }
 
 const signUpFailure = function (err) {
-  $('#messaging').text('Failed to sign up, please check email and passwords: ' + err.status)
+  $('#messaging').text('Failed to Sign Up, Please Check Email and Passwords: ' + err.status)
 }
 
 const signInSuccess = function (res) {
   $('#sign-in').trigger('reset')
   store.user = res.user
-  $('#messaging').text(res.user.email + ', has signed in successfully!')
+  $('#messaging').text(res.user.email + ', Signed In Successfully!')
   $('#after-sign-in').show()
   $('#before-sign-in').hide()
   $('#nav-bar').show()
+  $('#nav-bar-main').hide()
 }
 
 const signInFailure = function () {
-  $('#messaging').text('Failed to sign in, check email and password')
+  $('#messaging').text('Failed to Sign In, Check Email and Password')
 }
 
 const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
-  $('#messaging').text('Password change succesfull')
+  $('#messaging').text('Password Change Succesfull')
 }
 
 const changePasswordFailure = function () {
-  $('#messaging').text('Password change failed')
+  $('#messaging').text('Password Change Failed')
 }
 
 const signOutSuccess = function () {
   store.user = null
-  $('#messaging').text('Sign Out succesfull')
+  $('#messaging').text('Sign Out Succesfull')
   $('#before-sign-in').show()
   $('#after-sign-in').hide()
   $('#nav-bar').hide()
@@ -44,7 +45,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  $('#messaging').text('Sign out failed')
+  $('#messaging').text('Sign Out failed')
 }
 
 module.exports = {

@@ -5,7 +5,6 @@ const api = require('./api')
 const onAddStory = function (event) {
   event.preventDefault()
   ui.addStorySuccess()
-  // ui.addStoryFailure()
 }
 
 const onCreateStory = function (event) {
@@ -23,7 +22,15 @@ const onShowStories = function (event) {
     .then(ui.showStoriesSuccess)
     .catch(ui.showStoryFailure)
 }
-
+// Need to complete not working
+const onUpdateStory = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.updateStory(data)
+    .then(ui.updateStorySuccess)
+    .catch(ui.updateStoryFailure)
+}
+// Need to complete not working
 const onDeleteStory = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -36,5 +43,6 @@ module.exports = {
   onAddStory,
   onCreateStory,
   onShowStories,
+  onUpdateStory,
   onDeleteStory
 }

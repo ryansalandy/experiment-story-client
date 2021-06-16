@@ -23,6 +23,16 @@ const showStories = function (data) {
   })
 }
 
+const updateStory = function (id) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/stories/' + id,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 const deleteStory = function (id) {
   return $.ajax({
     method: 'DELETE',
@@ -36,5 +46,6 @@ const deleteStory = function (id) {
 module.exports = {
   createStory,
   showStories,
+  updateStory,
   deleteStory
 }

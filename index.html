@@ -24,6 +24,16 @@
       <button id="sign-out" class="btn btn-light">Sign Out</button>
     </nav>
   </section>
+  <section id="nav-bar-main">
+    <nav class="navbar navbar-light bg-light">
+      <form id="sign-up">
+        <input name="credentials[email]" required type="email" placeholder="Email" />
+        <input name="credentials[password]" required type="password" placeholder="Password" />
+        <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
+        <button type="submit" class="btn btn-light">Create Account</button>
+      </form>
+    </nav>
+  </section>
 
   <div class="container">
     <div class="row mt-3">
@@ -35,7 +45,7 @@
         </header>
 
         <section id="before-sign-in">
-          <h4>Sign Up</h4>
+          <!-- <h4>Sign Up</h4>
           <div>
             <form id="sign-up">
               <input name="credentials[email]" required type="email" placeholder="Email" />
@@ -43,8 +53,8 @@
               <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
               <button type="submit" class="btn btn-light">Sign Up</button>
             </form>
-          </div>
-          <h4>Sign In</h4>
+          </div> -->
+          <!-- <h4></h4> -->
           <div>
             <form id="sign-in">
               <input name="credentials[email]" required type="email" placeholder="Email">
@@ -61,7 +71,7 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-md-6">
-          <button id="add-story" type="submit" class="btn btn-light">ADD</button>
+          <button id="add-story" type="submit" class="btn btn-light">CREATE</button>
           <button id="show-stories" type="submit" class="btn btn-light">SHOW</button>
         </div>
       </div>
@@ -90,6 +100,9 @@
     <div id="story-list">
 
     </div>
+  </div>
+  <div class="footer">
+    <p>Ryan's Experience Stories</p>
   </div>
 </body>
 

@@ -2,23 +2,18 @@
 
 const userEvents = require('./user/events.js')
 const storyEvents = require('./story/events.js')
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
 
 $(() => {
-  // Before sign in listeners
   $('#sign-up').on('submit', userEvents.onSignUp)
   $('#sign-in').on('submit', userEvents.onSignIn)
-  // After sign in listeners
   $('#change-password').on('submit', userEvents.onChangePassword)
   $('#sign-out').on('click', userEvents.onSignOut)
-  // Experiment Story listners
   $('#add-story').on('click', storyEvents.onAddStory)
   $('#create-story').on('submit', storyEvents.onCreateStory)
   $('#show-stories').on('click', storyEvents.onShowStories)
-  // $('#update-story').on('click', storyEvents.onUpdateStory)
+  // Still working on update and delete.
+  // Update another listener for the update form button
+  // Delete is not working may need to figure how to connect id
+  $('#update-story').on('click', storyEvents.onUpdateStory)
   $('#delete-story').on('click', storyEvents.onDeleteStory)
 })
