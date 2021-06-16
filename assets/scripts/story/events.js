@@ -11,7 +11,6 @@ const onAddStory = function (event) {
 const onCreateStory = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.createStory(data)
     .then(ui.createStorySuccess)
     .catch(ui.createStoryFailure)
@@ -19,7 +18,8 @@ const onCreateStory = function (event) {
 
 const onShowStories = function (event) {
   event.preventDefault()
-  api.showStories()
+  const data = getFormFields(event.target)
+  api.showStories(data)
     .then(ui.showStoriesSuccess)
     .catch(ui.showStoryFailure)
 }
@@ -27,10 +27,9 @@ const onShowStories = function (event) {
 const onDeleteStory = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  const id = data.story.id
-  api.deleteTeam(data, id)
-    .then(ui.deleteTeamSuccess)
-    .catch(ui.deleteTeamFailure)
+  api.deleteStory(data)
+    .then(ui.deleteStorySuccess)
+    .catch(ui.deleteStorySuccess)
 }
 
 module.exports = {

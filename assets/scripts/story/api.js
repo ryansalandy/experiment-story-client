@@ -2,7 +2,6 @@ const config = require('./../config')
 const store = require('./../store')
 
 const createStory = function (data) {
-  console.log('api create data ', data)
   return $.ajax({
     method: 'POST',
     data,
@@ -24,10 +23,9 @@ const showStories = function (data) {
   })
 }
 
-const deleteStory = function (data, id) {
+const deleteStory = function (id) {
   return $.ajax({
     method: 'DELETE',
-    data,
     url: config.apiUrl + '/stories/' + id,
     headers: {
       Authorization: `Bearer ${store.user.token}`

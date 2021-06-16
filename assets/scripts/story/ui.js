@@ -32,11 +32,12 @@ const showStoriesSuccess = function (res) {
     <div class="post-list row">
       <div class="card mt-4 col-md-6 bg-light">
         <div class="card-body" id="stories-div">
-          <p class="card-text">${story.hypothesis}</p>
+          <p class="card-text">${story.hypothesis}</p><br />
           <h6 class="card-subtitle mb-2 text-muted">${story.tactic}</h6>
+          <p class="card-subtitle mb-2 text-muted">${story._id}</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button class="btn btn-light me-md-2" type="button">Update</button>
-            <button id="delete-story" type="submit" class="btn btn-light">Done</button>
+            <button id="delete-story" class="btn btn-light">Delete</button>
           </div>
         </div>
       </div>
