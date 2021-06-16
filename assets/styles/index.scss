@@ -27,6 +27,12 @@ h4 {
   color: rgb(80, 69, 175);
 }
 
+#sign-out {
+  background-color: rgb(252, 167,33);
+  color: white;
+  hover: rgb(80, 69, 175);
+}
+
 .btn {
   color: rgb(80, 69, 175);
   font-weight: bold;
@@ -50,9 +56,9 @@ label {
   color: rgb(80, 69, 175);
 }
 
-.nav-btn {
-  margin: auto;
-}
+// .nav-btn {
+//   margin: auto;
+// }
 
 form {
   margin: 8px 0px 26px 0;
