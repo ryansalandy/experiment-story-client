@@ -29,7 +29,8 @@ const showStoriesSuccess = function (res) {
       <div class="card mt-4 col-md-6 bg-light">
         <div class="card-body" id="stories-div">
           <p class="card-text">${story.hypothesis}</p><br />
-          <h6 class="card-subtitle">${story.tactic}</h6>
+          <h6 class="card-subtitle">${story.tactic}</h6><br />
+          <p class="card-text">ID: ${story._id}</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button id="update-story" class="btn btn-light">Update</button>
             <button id="delete-story" class="btn btn-light">Delete</button>
@@ -47,6 +48,8 @@ const showStoriesFailure = function () {
 }
 
 // Need to create the ui for Update to enter resource changes
+// Its seems that the buttons in the above ui is none responsive
+// to the listner and does not show up in console.
 // May need a seperate form to input those changes along with id
 // const updateStorySuccess = function () {
 //
@@ -54,9 +57,7 @@ const showStoriesFailure = function () {
 
 const deleteStorySuccess = function (res) {
   $('#delete-story').trigger('reset')
-  // store.story = null
   $('#messaging').text('Story has been Deleted')
-  // store.story = res.story
   // $('#after-add').hide()
 }
 
