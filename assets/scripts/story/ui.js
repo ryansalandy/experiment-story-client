@@ -22,9 +22,9 @@ const showStoriesSuccess = function (res) {
   $('#messaging').text('These are your Experiment Stories to Complete')
   $('#after-add').hide()
   $('#story-list').show()
-  let storiesHtml = ''
+  let storyCard = ''
   res.stories.forEach(function (story) {
-    storiesHtml += `
+    storyCard += `
     <div class="post-list row">
       <div class="card mt-4 col-md-6 bg-light">
         <div class="card-body" id="stories-div">
@@ -39,7 +39,7 @@ const showStoriesSuccess = function (res) {
     </div>
     `
   })
-  $('#story-list').html(storiesHtml)
+  $('#story-list').html(storyCard)
 }
 
 const showStoriesFailure = function () {
@@ -54,7 +54,7 @@ const showStoriesFailure = function () {
 
 const deleteStorySuccess = function (res) {
   $('#delete-story').trigger('reset')
-  store.story = null
+  // store.story = null
   $('#messaging').text('Story has been Deleted')
   // store.story = res.story
   // $('#after-add').hide()

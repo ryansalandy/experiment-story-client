@@ -1,4 +1,5 @@
 const getFormFields = require('./../../../lib/get-form-fields')
+const store = require('./../store')
 const ui = require('./ui')
 const api = require('./api')
 
@@ -33,10 +34,10 @@ const onUpdateStory = function (event) {
 // Need to complete not working
 const onDeleteStory = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.deleteStory(data)
+
+  api.deleteStory(store.story._id)
     .then(ui.deleteStorySuccess)
-    .catch(ui.deleteStorySuccess)
+    .catch(ui.deleteStoryFailure)
 }
 
 module.exports = {
