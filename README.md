@@ -7,11 +7,11 @@ Experiment stories contain the following elements:
 * The hypothesis being tested
 * Tactic(s) for learning (customer interviews, A/B tests, prototypes, etc.)
 
-[Deployed app].(https://ryansalandy.github.io/experiment-story-client/)
+[Deployed app](https://ryansalandy.github.io/experiment-story-client/)
 
 ##Wireframes
 
-![Diagram].(https://ryansalandy.com/wp-content/uploads/2021/06/Experiment-Story-Wireframe.png)
+![Diagram](https://ryansalandy.com/wp-content/uploads/2021/06/Experiment-Story-Wireframe.png)
 
 ##User stories
 - [] As a user, I want to sign up
