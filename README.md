@@ -13,7 +13,7 @@ Experiment stories contain the following elements:
 
 ![Diagram](https://ryansalandy.com/wp-content/uploads/2021/06/ES-Wireframes.png)
 
-##User stories
+## User stories
 - [] As a user, I want to sign up
 - [] As a user, I want to sign in
 - [] As a user, I want to add Experiment Stories
