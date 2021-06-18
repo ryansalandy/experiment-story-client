@@ -11,8 +11,7 @@ Experiment stories contain the following elements:
 
 ##Wireframes
 
-![Diagram]
-(https://ryansalandy.com/wp-content/uploads/2021/06/Experiment-Story-Wireframe.png)
+![Diagram].(https://ryansalandy.com/wp-content/uploads/2021/06/Experiment-Story-Wireframe.png)
 
 ##User stories
 - [] As a user, I want to sign up
