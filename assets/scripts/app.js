@@ -17,4 +17,5 @@ $(() => {
   // or move the button to index html outside of the story ui
   $('#update-story').on('click', storyEvents.onUpdateStory)
   $('#delete-story').on('click', storyEvents.onDeleteStory)
+  $('#story-delete').on('submit', storyEvents.onStoryDelete)
 })

@@ -1,5 +1,5 @@
 const getFormFields = require('./../../../lib/get-form-fields')
-const store = require('./../store')
+// const store = require('./../store')
 const ui = require('./ui')
 const api = require('./api')
 
@@ -23,21 +23,31 @@ const onShowStories = function (event) {
     .then(ui.showStoriesSuccess)
     .catch(ui.showStoryFailure)
 }
-// Need to complete not working
+
 const onUpdateStory = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.updateStory(data)
-    .then(ui.updateStorySuccess)
-    .catch(ui.updateStoryFailure)
+  ui.updateStorySuccess()
 }
+// Need to complete not working
+// const onUpdateStory = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.updateStory(data)
+//     .then(ui.updateStorySuccess)
+//     .catch(ui.updateStoryFailure)
+// }
 // Need to complete not working
 const onDeleteStory = function (event) {
   event.preventDefault()
+  ui.deleteStorySuccess()
+}
 
-  api.deleteStory(store.story._id)
-    .then(ui.deleteStorySuccess)
-    .catch(ui.deleteStoryFailure)
+const onStoryDelete = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.deleteStory(data)
+    .then(ui.storyDeleteSuccess)
+    .catch(ui.storyDeleteFailure)
 }
 
 module.exports = {
@@ -45,5 +55,6 @@ module.exports = {
   onCreateStory,
   onShowStories,
   onUpdateStory,
-  onDeleteStory
+  onDeleteStory,
+  onStoryDelete
 }
