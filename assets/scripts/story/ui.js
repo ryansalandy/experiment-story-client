@@ -66,6 +66,7 @@ const updateStorySuccess = function () {
 
 const deleteStorySuccess = function (res) {
   $('#messaging').text('Enter Experiment Story ID')
+  $('#delete-story').trigger('reset')
   $('#after-add').hide()
   $('#story-list').hide()
   $('#after-update').hide()
