@@ -44,8 +44,8 @@ const onDeleteStory = function (event) {
 
 const onStoryDelete = function (event) {
   event.preventDefault()
-  const id = getFormFields(event.target)
-  api.deleteStory(id)
+  const data = getFormFields(event.target)
+  api.deleteStory(data.story.id)
     .then(ui.storyDeleteSuccess)
     .catch(ui.storyDeleteFailure)
 }
