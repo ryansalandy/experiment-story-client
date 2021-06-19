@@ -34,6 +34,7 @@ const updateStory = function (id) {
 }
 
 const deleteStory = function (id) {
+  console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/stories/' + id,
