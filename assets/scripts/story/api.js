@@ -23,9 +23,10 @@ const showStories = function (data) {
   })
 }
 
-const updateStory = function (id) {
+const updateStory = function (data, id) {
   return $.ajax({
     method: 'PATCH',
+    data,
     url: config.apiUrl + '/stories/' + id,
     headers: {
       Authorization: `Bearer ${store.user.token}`

@@ -16,6 +16,7 @@ $(() => {
   // Delete is not working may need to figure how to connect id
   // or move the button to index html outside of the story ui
   $('#update-story').on('click', storyEvents.onUpdateStory)
+  $('#story-update').on('submit', storyEvents.onStoryUpdate)
   $('#delete-story').on('click', storyEvents.onDeleteStory)
   $('#story-delete').on('submit', storyEvents.onStoryDelete)
 })

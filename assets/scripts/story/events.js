@@ -29,13 +29,16 @@ const onUpdateStory = function (event) {
   ui.updateStorySuccess()
 }
 // Need to complete not working
-// const onUpdateStory = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.updateStory(data)
-//     .then(ui.updateStorySuccess)
-//     .catch(ui.updateStoryFailure)
-// }
+const onStoryUpdate = function (event) {
+  event.preventDefault()
+
+  const data = getFormFields(event.target)
+  const id = data.story.id
+  // const data = getFormFields(event.target)
+  api.updateStory(data, id)
+    .then(ui.storyUpdateSuccess)
+    .catch(ui.storyUpdateFailure)
+}
 // Need to complete not working
 const onDeleteStory = function (event) {
   event.preventDefault()
@@ -55,6 +58,7 @@ module.exports = {
   onCreateStory,
   onShowStories,
   onUpdateStory,
+  onStoryUpdate,
   onDeleteStory,
   onStoryDelete
 }

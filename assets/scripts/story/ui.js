@@ -35,7 +35,7 @@ const showStoriesSuccess = function (res) {
           <p class="card-text">${story.hypothesis}</p><br />
           <h6 class="card-subtitle">${story.tactic}</h6><br />
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <p class="card-text"><b>ID:</b> ${story._id}</p>
+            <p class="card-text"><b>Story ID:</b> ${story._id}</p>
           </div>
         </div>
       </div>
@@ -51,18 +51,19 @@ const showStoriesFailure = function () {
 
 const updateStorySuccess = function () {
   $('#messaging').text('Enter Experiment Story Tactic')
+  $('#update-story').trigger('reset')
   $('#after-add').hide()
   $('#story-list').hide()
   $('#after-delete').hide()
   $('#after-update').show()
 }
-// Need to create the ui for Update to enter resource changes
-// Its seems that the buttons in the above ui is none responsive
-// to the listner and does not show up in console.
-// May need a seperate form to input those changes along with id
-// const updateStorySuccess = function () {
-//
-// }
+
+const storyUpdateSuccess = function (res) {
+  $('#messaging').text('Your Experiment Story Tactic was Updated')
+  $('#story-update').trigger('reset')
+  // store.story = res.story
+  $('#after-update').hide()
+}
 
 const deleteStorySuccess = function (res) {
   $('#messaging').text('Enter Experiment Story ID')
@@ -86,6 +87,7 @@ module.exports = {
   showStoriesSuccess,
   showStoriesFailure,
   updateStorySuccess,
+  storyUpdateSuccess,
   deleteStorySuccess,
   storyDeleteSuccess
 }
