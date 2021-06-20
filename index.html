@@ -45,16 +45,6 @@
         </header>
 
         <section id="before-sign-in">
-          <!-- <h4>Sign Up</h4>
-          <div>
-            <form id="sign-up">
-              <input name="credentials[email]" required type="email" placeholder="Email" />
-              <input name="credentials[password]" required type="password" placeholder="Password" />
-              <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
-              <button type="submit" class="btn btn-light">Sign Up</button>
-            </form>
-          </div> -->
-          <!-- <h4></h4> -->
           <div>
             <form id="sign-in">
               <input name="credentials[email]" required type="email" placeholder="Email">
@@ -79,65 +69,65 @@
       </div>
     </div>
 
-  <section id="after-add" class="no-show">
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-md-6">
-          <form class="add-post-form" id="create-story">
-            <div class="form-group">
-              <label for="body">Hypothesis:</label>
-              <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="title">Tactic:</label>
-              <input name="story[tactic]" type="text" class="form-control" id="title-value">
-            </div>
-            <button type="submit" class="btn btn-light">Add Story</button>
-          </form>
+    <section id="after-add" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="create-story">
+              <div class="form-group">
+                <label for="body">Hypothesis:</label>
+                <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="title">Tactic:</label>
+                <input name="story[tactic]" type="text" class="form-control" id="title-value">
+              </div>
+              <button type="submit" class="btn btn-light">Add Story</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="after-update" class="no-show">
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-md-6">
-          <form class="add-post-form" id="story-update">
-            <div class="form-group">
-              <label for="title">Tactic:</label>
-              <input name="story[tactic]" type="text" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="title">Story ID:</label>
-              <input name="story[id]" type="text" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-light">Update Tactic</button>
-          </form>
+    <section id="after-update" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="story-update">
+              <div class="form-group">
+                <label for="title">Tactic:</label>
+                <input name="story[tactic]" type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="title">Story ID:</label>
+                <input name="story[id]" type="text" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-light">Update Tactic</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="after-delete" class="no-show">
-    <div class="container">
-      <div class="row mt-3">
-        <div class="col-md-6">
-          <form class="add-post-form" id="story-delete">
-            <div class="form-group">
-              <label for="title">Story ID:</label>
-              <input name="story[id]" type="text" class="form-control" id="ID-value">
-            </div>
-            <button type="submit" class="btn btn-light">Delete Story</button>
-          </form>
+    <section id="after-delete" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="story-delete">
+              <div class="form-group">
+                <label for="title">Story ID:</label>
+                <input name="story[id]" type="text" class="form-control" id="ID-value">
+              </div>
+              <button type="submit" class="btn btn-light">Delete Story</button>
+            </form>
+          </div>
         </div>
       </div>
+    </section>
+
+    <div class="container" id="story-list">
+
     </div>
-  </section>
-
-  <div class="container" id="story-list">
-
-  </div>
   </section>
   <div class="footer">
     <p>Ryan's Experience Stories</p>

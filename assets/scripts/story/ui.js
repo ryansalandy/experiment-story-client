@@ -61,7 +61,6 @@ const updateStorySuccess = function () {
 const storyUpdateSuccess = function (res) {
   $('#messaging').text('Your Experiment Story Tactic was Updated')
   $('#story-update').trigger('reset')
-  // store.story = res.story
   $('#after-update').hide()
 }
 

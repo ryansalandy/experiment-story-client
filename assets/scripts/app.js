@@ -11,10 +11,6 @@ $(() => {
   $('#add-story').on('click', storyEvents.onAddStory)
   $('#create-story').on('submit', storyEvents.onCreateStory)
   $('#show-stories').on('click', storyEvents.onShowStories)
-  // Still working on update and delete.
-  // Update another listener for the update form button
-  // Delete is not working may need to figure how to connect id
-  // or move the button to index html outside of the story ui
   $('#update-story').on('click', storyEvents.onUpdateStory)
   $('#story-update').on('submit', storyEvents.onStoryUpdate)
   $('#delete-story').on('click', storyEvents.onDeleteStory)

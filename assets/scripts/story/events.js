@@ -1,5 +1,4 @@
 const getFormFields = require('./../../../lib/get-form-fields')
-// const store = require('./../store')
 const ui = require('./ui')
 const api = require('./api')
 
@@ -28,18 +27,17 @@ const onUpdateStory = function (event) {
   event.preventDefault()
   ui.updateStorySuccess()
 }
-// Need to complete not working
+
 const onStoryUpdate = function (event) {
   event.preventDefault()
 
   const data = getFormFields(event.target)
   const id = data.story.id
-  // const data = getFormFields(event.target)
   api.updateStory(data, id)
     .then(ui.storyUpdateSuccess)
     .catch(ui.storyUpdateFailure)
 }
-// Need to complete not working
+
 const onDeleteStory = function (event) {
   event.preventDefault()
   ui.deleteStorySuccess()

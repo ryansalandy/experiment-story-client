@@ -1,7 +1,6 @@
 
 const store = require('./../store')
 
-// Sign up begin
 const signUpSuccess = function (res) {
   $('#sign-up').trigger('reset')
   $('#messaging').text('Please Sign In with, ' + res.user.email)
