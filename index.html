@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Experiment Stories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <section id="nav-bar" class="no-show">
+    <nav class="navbar navbar-light bg-light">
+      <form id="change-password">
+        <input name="passwords[old]" required type="password" placeholder="Old password" />
+        <input name="passwords[new]" required type="password" placeholder="New password" />
+        <button class="btn btn-light" type="submit">Change password</button>
+      </form>
+      <button id="sign-out" class="btn btn-light">Sign Out</button>
+    </nav>
+  </section>
+  <section id="nav-bar-main">
+    <nav class="navbar navbar-light bg-light">
+      <form id="sign-up">
+        <input name="credentials[email]" required type="email" placeholder="Email" />
+        <input name="credentials[password]" required type="password" placeholder="Password" />
+        <input name="credentials[password_confirmation]" required type="password" placeholder="Password... again" />
+        <button type="submit" class="btn btn-light">Create Account</button>
+      </form>
+    </nav>
+  </section>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9">
+
+        <header>
+          <h1>Experiment Stories</h1>
+          <p id="messaging"></p>
+        </header>
+
+        <section id="before-sign-in">
+          <div>
+            <form id="sign-in">
+              <input name="credentials[email]" required type="email" placeholder="Email">
+              <input name="credentials[password]" required type="password" placeholder="password">
+              <button type="submit" class="btn btn-light">Sign In</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <section id='after-sign-in' class="no-show">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-8">
+          <button id="add-story" type="submit" class="btn btn-light">CREATE</button>
+          <button id="show-stories" type="submit" class="btn btn-light">READ</button>
+          <button id="update-story" type="submit" class="btn btn-light">UPDATE</button>
+          <button id="delete-story" type="submit" class="btn btn-light">DELETE</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="after-add" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="create-story">
+              <div class="form-group">
+                <label for="body">Hypothesis:</label>
+                <textarea name="story[hypothesis]" class="form-control" id="body-value"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="title">Tactic:</label>
+                <input name="story[tactic]" type="text" class="form-control" id="title-value">
+              </div>
+              <button type="submit" class="btn btn-light">Add Story</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="after-update" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="story-update">
+              <div class="form-group">
+                <label for="title">Tactic:</label>
+                <input name="story[tactic]" type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="title">Story ID:</label>
+                <input name="story[id]" type="text" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-light">Update Tactic</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="after-delete" class="no-show">
+      <div class="container">
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <form class="add-post-form" id="story-delete">
+              <div class="form-group">
+                <label for="title">Story ID:</label>
+                <input name="story[id]" type="text" class="form-control" id="ID-value">
+              </div>
+              <button type="submit" class="btn btn-light">Delete Story</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="story-list">
+
+    </div>
+  </section>
+  <div class="footer">
+    <p>Ryan's Experience Stories</p>
+  </div>
+</body>
+
+</html>
